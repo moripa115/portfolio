@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>MORIHARUKA</title>
+</head>
+
+<body>
+  <header>
+    <div class="innnerWrap">
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="#plofile">Plofile</a>
+          </li>
+          <li>
+            <a href="#products">制作物について</a>
+          </li>
+          <li>
+            <a href="#poetory">詩について</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/morizodozo" target="_blank"><img src="/img/x.png" alt="Twitter"
+                style="height: 20px;"></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/moripa115/" target="_blank"><img src="/img/instagram.png" alt="Instagram"
+                style="height: 20px;"></a>
+          </li>
+          <li>
+            <a href=""><img src="/img/facebook.png" alt="Facebook" style="height: 20px;"></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <h2>MORI HARUKA</h2>
+  </div>
+
+  <div class="profile" id="plofile">
+    <h3>Plofile</h3>
+    <div class="plofile-content">
+      <img src="/img/plofile.jpg" alt="" style="height: 100px; width: 100px; border-radius: 50%;">
+      <div>
+        <p>森遥 | Mori Haruka</p>
+        <p>横浜市在住。慶應義塾大学法学部政治学科2年生。</p>
+        <p>長期インターンでコミュニティマネージャーとして活動。</p>
+        <p>大学生向けのプログラミング学習コミュニティPOSSEを立ち上げる。</p>
+        <p>趣味は生花、絵を描くこと</p>
+        <p>将来の夢はUI,UXデザイナー</p>
+      </div>
+    </div>
+  </div>
+  <div class="products" id="products">
+    <h3>制作物について</h3>
+  </div>
+  <div class="poetory" id="poetory">
+    <h3>詩について</h3>
+    <div class="poetory-content">
+      <p>書くとは愛の行為である。</p>
+      <p>そうでなければ文字の羅列にすぎない。</p>
+      <p>ジャン・コクトー</p>
+      <div class="lists">
+      <a href="https://hirokas.com/wp-content/uploads/2023/04/%E6%94%B9%E6%9C%AD%E3%82%92%E5%87%BA%E3%81%A6.pdf">改札を出て</a><br>
+      <a href="https://hirokas.com/wp-content/uploads/2023/04/%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E4%BC%9A%E8%A9%B1.pdf">その他の会話</a><br>
+      <a href="https://hirokas.com/wp-content/uploads/2023/05/%E7%9B%AE%E3%81%8C%E8%A6%9A%E3%82%81%E3%81%A6.pdf">目が覚めて</a><br>
+      <a href="https://hirokas.com/wp-content/uploads/2023/06/%E6%BC%82%E3%81%86.pdf">漂う</a><br>
+      <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:de45f785-b2df-4736-bc22-314631f022a2">独りなんかじゃ、</a>
+    </div>
+    </div>
+  </div>
+
+  <script src="anime.min.js"></script>
+  <script>
+    const container = document.querySelector(".container")
+    for (var i = 0; i <= 40; i++) {
+      const blocks = document.createElement("div")
+      blocks.classList.add("block")
+      container.appendChild(blocks);
+    }
+    function animateBlocks() {
+      anime({
+        targets: ".block ",
+        translateX: function () {
+          return anime.random(-600, 600);
+        },
+        translateY: function () {
+          return anime.random(-300, 300)
+        },
+        scale: function () {
+          return anime.random(1, 2)
+        },
+        duration: 2500,
+        delay: anime.stagger(15),
+        complete: animateBlocks,
+      })
+    }
+    animateBlocks();
+  </script>
+</body>
+
+</html>

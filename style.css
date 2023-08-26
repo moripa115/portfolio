@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto+Slab&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab","NanumGothic";
+}
+
+body{
+  /* background-color: rgba(0, 102, 255, 0.457); */
+  /* overflow: hidden; */
+  position: relative;
+
+}
+
+/* header */
+.innnerWrap{
+  position: fixed;
+  background-color: #a29595e0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 10000;
+}
+
+header nav ul{
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  padding: 20px;
+  margin-right: 0;
+  float: right;
+}
+
+ul{
+  list-style: none;
+}
+
+
+/* contents */
+.container{
+  background-color: rgba(0, 102, 255, 0.457);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  height: 800px;
+}
+
+h2{
+  color: #ffff;
+  font-size: 4rem;
+  text-align: center;
+  z-index: 2;
+
+}
+
+.block{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(131, 253, 149, 0.949);
+}
+
+/* profile */
+.profile{
+  height: 350px;
+  padding-top:100px;
+}
+
+h3{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.plofile-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.plofile-content img{
+  margin-right: 30px;
+}
+
+.plofile-content p{
+  font-size: 0.9rem;
+}
+
+
+/* products */
+.products{
+  height: 500px;
+}
+
+/* poetory */
+.poetory{
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.poetory-content{
+  /* display: flex; */
+  margin-top: 30px;
+}
+
+.lists{
+  margin-top: 30px;
+}
